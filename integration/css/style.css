@@ -2,12 +2,11 @@
 
 :root {
     --var-default-spacing: 1rem;
-    --var-color-black: rgb(56, 56, 56);
-    
+    --var-color-gray: rgb(89, 89, 89);
 }
 
 ::placeholder {
-    color: var(--var-color-black);
+    color: var(--var-color-gray);
     font-weight: 300;
     opacity: 0.8;
 }
@@ -15,12 +14,12 @@
 .body {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
-    color: var(--var-color-black);
+    color: var(--var-color-gray);
 }
 
 a {
     text-decoration: none;
-    color: var(--var-color-black)0;
+    color: var(--var-color-gray)0;
 }
 
 .header {
@@ -29,23 +28,19 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: var(--var-default-spacing);
-    border-bottom: 1px solid var(--var-color-black);
+    border-bottom: 1px solid var(--var-color-gray);
 }
 
 .header--div {
     display: flex;
     flex-direction: column;
+    padding-bottom: var(--var-default-spacing);
 }
-
-.header--h1 {
-    font-size: 3rem;
-}
-
 
 .nav--ul--li {
     list-style: none;
     font-size: 1rem;
-    background-color: var(--var-color-black);
+    background-color: var(--var-color-gray);
     color: white;
     padding: 3px var(--var-default-spacing);
     font-weight: 700;
@@ -70,8 +65,9 @@ a {
 }
 
 .subject--container {
-    border: 1px solid var(--var-color-black);
-    padding: var(--var-default-spacing);
+    border-radius: var(--var-default-spacing);
+    border: 1px solid var(--var-color-gray);
+    padding: 0 var(--var-default-spacing);
 
 }
 
@@ -88,18 +84,18 @@ a {
 }
 
 .articles--container--h3 {
-    border-bottom: 1px solid var(--var-color-black);
+    border-bottom: 1px solid var(--var-color-gray);
 }
 
 .article {
     display: flex;
     padding: var(--var-default-spacing);
-    border: .15rem solid var(--var-color-black);
+    border: .15rem solid var(--var-color-gray);
     gap: var(--var-default-spacing);
 }
 
 .article:hover {
-    background-color: var(--var-color-black);
+    background-color: var(--var-color-gray);
     color: white;
 }
 
@@ -155,16 +151,16 @@ a {
 
 .form-field, .form-area {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 400;
     padding: .5rem 1rem;
     margin-bottom: 1rem;
     border: none;
     width: 100%;
-    border: 1px solid var(--var-color-black);
+    border: 1px solid var(--var-color-gray);
 }
 
 .form-field:focus, .form-area:focus {
-    outline: 2px solid var(--var-color-black);
+    outline: 2px solid var(--var-color-gray);
 }
 
 .form-area {
@@ -173,7 +169,7 @@ a {
 }
 
 .clickable {
-    background-color: var(--var-color-black);
+    background-color: var(--var-color-gray);
     color: white;
     padding: var(--var-default-spacing);
     font-size: 1.2rem;
@@ -192,13 +188,13 @@ a {
     font-weight: 400;
     text-align: justify;
     line-height:1.8rem;
-    border: 1px solid var(--var-color-black);
+    border: 1px solid var(--var-color-gray);
     padding: var(--var-default-spacing);
 
 }
 
 .footer {
     text-align: center;
-    border-top: 1px solid var(--var-color-black);
+    border-top: 1px solid var(--var-color-gray);
     width: 100%;
 }
