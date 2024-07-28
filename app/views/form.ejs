@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<div class="subject">
+    <h2 class="subject--h2">Cette semaine, vous êtes invité.e.s à jeter l'encre sur le sujet suivant</h2>
+    <div class="subject--container">
+        <p class="subject--container--p">AFFICHER ICI LE THÈME</p>
+    </div>
+</div>
+
+<div class="form--container">
+    <h2 class="form--h2">Particpation</h2>
+    <form class="form" action="post">
+        <fieldset class="form-fieldset">
+
+            <label class="form-label" for="name">Nom</label>
+            <input class="form-field" type="text" name="name" id="name" placeholder="michel, marioBG, the-scranton-strangler, ..." required>
+
+            <label class="form-label" for="email">Email</label>
+            <input class="form-field" type="email" name="email" id="email" placeholder="michel@isable.com" required>
+
+            <label class="form-label" for="theme">Thème</label>
+            <select class="form-field" name="theme" id="theme">
+                <option value="theme#id">Thème de la semaine</option>
+                <option value="theme#id">Thème de la semaine précédente</option>
+                <option value="theme#id">Thème de la semaine précédente -1</option>
+            </select>
+
+            <label class="form-label" for="submited-text">Votre participation</label>
+            <textarea class="form-area" name="submited-text" id="submited-text"></textarea>
+
+            <button class="clickable">Envoyer</button>
+        </fieldset>
+    </form>
+</div>
+
+<%- include('partials/footer') %>
