@@ -1,41 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body {
+:root {
+    --var-default-spacing: 1rem;
+    --var-color-black: rgb(56, 56, 56);
+    
+}
+
+::placeholder {
+    color: var(--var-color-black);
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.body {
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    color: var(--var-color-black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--var-color-black)0;
 }
 
 .header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #000;
+    padding: var(--var-default-spacing);
+    border-bottom: 1px solid var(--var-color-black);
+}
+
+.header--div {
+    display: flex;
+    flex-direction: column;
 }
 
 .header--h1 {
     font-size: 3rem;
 }
 
-.main {
-    padding: 20px;
+
+.nav--ul--li {
+    list-style: none;
+    font-size: 1rem;
+    background-color: var(--var-color-black);
+    color: white;
+    padding: 3px var(--var-default-spacing);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
 }
 
-.subject {
+.main {
+    padding: var(--var-default-spacing);
+}
+
+.subject, .form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     font-weight: 700;
     font-size: 1.2rem;
 }
 
 .subject--h2 {
-    margin-bottom: 20px;
+    margin-bottom: var(--var-default-spacing);
 }
 
 .subject--container {
-    border: 1px solid #000;
-    padding: 10px;
+    border: 1px solid var(--var-color-black);
+    padding: var(--var-default-spacing);
 
 }
 
@@ -44,38 +80,125 @@ body {
 }
 
 .articles--container {
-    margin: 20px 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    margin: var(--var-default-spacing);
+    padding: 3rem 20rem;
+    gap: var(--var-default-spacing);
+}
+
+.articles--container--h3 {
+    border-bottom: 1px solid var(--var-color-black);
 }
 
 .article {
     display: flex;
-    padding: 10px;
-    border: 1px solid #000;
-    gap: 10px;
+    padding: var(--var-default-spacing);
+    border: .15rem solid var(--var-color-black);
+    gap: var(--var-default-spacing);
 }
 
-.article--cell {
-    display: flex;
-    justify-content: center;
+.article:hover {
+    background-color: var(--var-color-black);
+    color: white;
+}
+
+.article--cell, .display--cell {
     align-items: center;
     font-weight: 700;
 }
 
+.display--cell {
+    padding: var(--var-default-spacing) 0;
+}
+
+.article--author-container {
+    text-align: left;
+    width: 30%;
+}
+
 .article--cell__info {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .article--cell__title {
     font-size: 1rem;
 }
 
+.form--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--default-spacing);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.form--h2 {
+    font-size: 2rem;
+    margin: var(--var-default-spacing);
+}
+
+.form-fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    border: none;
+}
+
+.form-field, .form-area {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    width: 100%;
+    border: 1px solid var(--var-color-black);
+}
+
+.form-field:focus, .form-area:focus {
+    outline: 2px solid var(--var-color-black);
+}
+
+.form-area {
+    height: 10rem;
+    resize: none;
+}
+
+.clickable {
+    background-color: var(--var-color-black);
+    color: white;
+    padding: var(--var-default-spacing);
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.display {
+    margin: var(--var-default-spacing);
+    padding: 0 5rem;
+}
+
+.article--display {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height:1.8rem;
+    border: 1px solid var(--var-color-black);
+    padding: var(--var-default-spacing);
+
+}
+
 .footer {
     text-align: center;
-    border-top: 1px solid #000;
-    position: fixed;
-    bottom: 0;
+    border-top: 1px solid var(--var-color-black);
     width: 100%;
 }
