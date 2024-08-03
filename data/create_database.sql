@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS author;
 -- Create tables
 CREATE TABLE author (
     id SERIAL PRIMARY KEY,
-    authorname VARCHAR(255) NOT NULL UNIQUE,
+    author_name VARCHAR(255) NOT NULL UNIQUE,
     author_email VARCHAR(255) NOT NULL UNIQUE
 );
 
@@ -26,7 +26,7 @@ CREATE TABLE article (
 );
 
 -- Insert data test
-INSERT INTO author (authorname, author_email) VALUES
+INSERT INTO author (author_name, author_email) VALUES
     ('michel', 'michel@isable.com'),
     ('marioBG', 'marioBG@isable.com'),
     ('the-scranton-strangler', 'the-scranton-strangler@isable.com')

@@ -19,6 +19,6 @@ For now :
 - Javascript
 - HTML
 - CSS
-
+- *Even tried Adobe Illustrator to create both logo & favicon*
 
 
