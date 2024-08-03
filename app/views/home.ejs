@@ -12,7 +12,7 @@
     <h3 class="articles--container--h3">Consultez les derniers articles publiés</h3>
     
         <% articles.forEach( article => { %>
-            <a href="article.html">
+            <a href="/article/<%= article.id %>">
                 <div class="article">
                     <div class="article--author-container">
                         <div class="article--cell">
