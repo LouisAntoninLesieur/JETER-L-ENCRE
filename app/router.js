@@ -1,9 +1,11 @@
+const mainController = require('./controllers/mainController');
+
 const express = require('express');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.sendFile('/integration/index.html');
-});
+router.get('/', mainController.homePage);
+// router.get('/article', mainController.articlePage);
+// router.get('/participer', mainController.formPage);
 
 module.exports = router;

@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+<div class="subject">
+    <h2 class="subject--h2">Cette semaine, nous vous invitons à jeter l'encre sur le sujet suivant</h2>
+    <div class="subject--container">
+        <p class="subject--container--p"> <%= theme.name %></p>
+    </div>
+</div>
+
+<div class="articles--container">
+    
+    <h3 class="articles--container--h3">Consultez les derniers articles publiés</h3>
+    
+        <% articles.forEach( article => { %>
+            <a href="article.html">
+                <div class="article">
+                    <div class="article--author-container">
+                        <div class="article--cell">
+                            <p class="article--cell__info">Écrit par: <%= article.author_name %></p>
+                        </div>
+                        <!-- <div class="article--cell">
+                            <p class="article--cell__info">Le : 27/07/2024</p>
+                        </div> -->
+                    </div>
+                    <div class="article--cell">
+                        <p class="article--cell__title">Titre: <%= article.title %></p>
+                    </div>
+                </div>
+            </a>
+        <% }) %>
+
+</div>
+
+<%- include('partials/footer') %>
